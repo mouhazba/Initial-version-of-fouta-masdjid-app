@@ -2,6 +2,8 @@ from service import db_manager
 import pandas as pd
 from fpdf import FPDF
 
+
+
 def calcul_total_encaisse():
     encaissements = db_manager.get_all_encaissements()
     total = 0

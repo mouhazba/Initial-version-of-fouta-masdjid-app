@@ -1,7 +1,22 @@
 import streamlit as st
 from service.calculs import calcul_total_encaisse, calcul_total_depenses, calcul_solde, get_statut_tous_donateurs
 
+
+# ======================
+# authenticated
+# ======================
+if "authenticated" not in st.session_state or not st.session_state.authenticated:
+    st.error("⛔ Accès refusé. Veuillez vous connecter.")
+    st.stop()
+
 st.title("📊 Ramadan de Fouta Masdjid ")
+
+# ======================
+# deconnexion
+# ======================
+if st.button("🔓 Déconnexion"):
+    st.session_state.authenticated = False
+    st.switch_page("app.py")
 
 # ======================
 # Résumé financier

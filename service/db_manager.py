@@ -237,7 +237,7 @@ if __name__ == "__main__":
     create_tables()
     print("Base de données et tables créées avec succès.")
     delete_all_depenses_and_reset_id()
-    delete_depense(8)
+    delete_depense(29)
     
     
     

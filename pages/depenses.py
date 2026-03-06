@@ -5,6 +5,15 @@ import pandas as pd
 from datetime import date
 
 
+# ======================
+# authenticated
+# ======================
+if "authenticated" not in st.session_state or not st.session_state.authenticated:
+    st.error("⛔ Accès refusé. Veuillez vous connecter.")
+    st.stop()
+
+st.title("📊 Ramadan de Fouta Masdjid ")
+
 # =========================
 # LISTE DES DÉPENSES
 # =========================

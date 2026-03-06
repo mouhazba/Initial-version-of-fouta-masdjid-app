@@ -3,7 +3,15 @@ from service.calculs import rapport_journalier, rapport_mensuel, calcul_annuel
 import matplotlib.pyplot as plt
 import pandas as pd
 
+# ======================
+# authenticated
+# ======================
+if "authenticated" not in st.session_state or not st.session_state.authenticated:
+    st.error("⛔ Accès refusé. Veuillez vous connecter.")
+    st.stop()
 
+
+st.title("📊 Ramadan de Fouta Masdjid ")
 
 st.header("📅 Rapport journalier")
 
